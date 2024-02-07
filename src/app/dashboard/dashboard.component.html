@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+    <h2>Übersichtsstatistik</h2>
+    <p>Gelernte Wörter: {{gelernteWoerter}}</p>
+    <p>Abgeschlossene Lektionen: {{abgeschlosseneLektionen}}</p>
+    <p>Verbrachte Lernzeit: {{verbrachteLernzeit}}</p>
+  
+    <h2>Fortschrittsbalken</h2>
+    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.grammatik}}"></mat-progress-bar>
+    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.wortschatz}}"></mat-progress-bar>
+    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.aussprache}}"></mat-progress-bar>
+  
+    <h2>Zuletzt gelernte Lektionen</h2>
+    <div *ngFor="let lektion of zuletztGelernteLektionen">
+      <p>{{lektion.name}}: {{lektion.beschreibung}}</p>
+    </div>
+  
+    <h2>Empfohlene Lektionen</h2>
+    <div *ngFor="let lektion of empfohleneLektionen">
+      <p>{{lektion.name}}: {{lektion.beschreibung}}</p>
+    </div>
+  </div>
+  

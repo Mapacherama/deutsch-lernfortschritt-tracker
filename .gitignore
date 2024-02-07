@@ -40,3 +40,14 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# End-to-End-Testdateien
+/e2e/*.js
+/e2e/*.map
+
+# Umgebungsdateien
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local

@@ -1,0 +1,35 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  mat-progress-bar {
+    width: 100%; /* Stellen Sie sicher, dass die Fortschrittsbalken die volle Breite nutzen */
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    /* Anpassungen für Tablets und Mobilgeräte */
+    .dashboard {
+      flex-direction: column;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    div {
+      padding: 10px;
+      width: 100%; /* Stellen Sie die Breite für kleinere Bildschirme ein */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Weitere Anpassungen speziell für Mobilgeräte */
+    p {
+      font-size: 14px; /* Schriftgröße für kleinere Bildschirme anpassen */
+    }
+  }
+  
