@@ -9,6 +9,11 @@ import { FortschrittsanzeigeComponent } from './fortschrittsanzeige/fortschritts
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { GermanMusicComponent } from './german-music/german-music/german-music.component';
+import { GermanAudiobooksComponent } from './german-audiobooks/german-audiobooks.component';
+import { GermanHistoryComponent } from './german-history/german-history.component';
+import { GermanTagebuchComponent } from './german-tagebuch/german-tagebuch.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { FooterComponent } from './footer/footer.component';
     FortschrittsanzeigeComponent,
     DashboardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GermanMusicComponent,
+    GermanAudiobooksComponent,
+    GermanHistoryComponent,
+    GermanTagebuchComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
