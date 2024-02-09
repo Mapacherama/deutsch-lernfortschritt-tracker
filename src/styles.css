@@ -16,3 +16,14 @@ html, body {
     font-family: Roboto, "Helvetica Neue", sans-serif; /* Schriftart für das gesamte Dokument */
   }
   
+  .content-wrap {
+    flex: 1 0 auto; 
+  }
+
+  app-footer {
+    /* flex-shrink: 0; Footer wird nicht verkleinert */
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+  }
+  
