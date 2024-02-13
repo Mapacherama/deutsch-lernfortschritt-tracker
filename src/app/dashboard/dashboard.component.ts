@@ -7,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  // Beispiel Daten
+  // Vorhandene Beispiel Daten
   gelernteWoerter = 150;
   abgeschlosseneLektionen = 10;
-  verbrachteLernzeit = '5 Stunden'; // Im realen Szenario, berechnen basierend auf tatsächlichen Daten
+  verbrachteLernzeit = '5 Stunden';
+
+  // Aktualisierte FortschrittsStatistiken
   fortschrittsStatistiken = {
-    grammatik: 70, // Prozent
+    grammatik: 70, // Prozent, verknüpft mit "Das erste Horn" als Buch, das ich am lesen bin
     wortschatz: 60, // Prozent
-    aussprache: 80, // Prozent
+    aussprache: 80, // Prozent, verknüpft mit "Harry Potter Hörbuch 7" als Hörbuch, das ich am hören bin
   };
 
-  // Daten für zuletzt gelernte Lektionen und empfohlene Lektionen
+  // Daten für zuletzt gelernte Lektionen und empfohlene Lektionen bleiben gleich
   zuletztGelernteLektionen = [
     { name: 'Einführung in die Grammatik', beschreibung: 'Grundlagen der deutschen Grammatik.' },
     { name: 'Wortschatz Aufbau', beschreibung: 'Erweiterung des Vokabulars.' }
@@ -28,9 +30,23 @@ export class DashboardComponent implements OnInit {
     { name: 'Aussprache Training', beschreibung: 'Verbesserung der Aussprache.' }
   ];
 
-  constructor() { }
+  // Neue Eigenschaften für Medienkonsum
+  letzterDeutscherFilm = 'Der Name des letzten Films'; // Beispiel: 'Der Name des letzten Films'
+  letztesDeutschesBuch = { // Aktuell gelesenes oder zuletzt gelesenes Buch
+    titel: 'Das erste Horn',
+    status: 'Am lesen', // oder 'Gelesen'
+    beschreibung: 'Ein Buch, das ich am lesen bin.'
+  };
+  letztesDeutschesAlbum = 'Der Name des letzten Albums'; // Beispiel: 'Der Name des letzten Albums'
+  letztesDeutschesHoerbuch = {
+    titel: 'Harry Potter Hörbuch 7',
+    status: 'Am hören',
+    beschreibung: 'Ein Hörbuch, das ich am hören bin.'
+  };
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // Initialisierungslogik hier
   }
 
+  // Weitere Methoden und Logik könnten hier hinzugefügt werden
 }
