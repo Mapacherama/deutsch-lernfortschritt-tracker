@@ -1,1 +1,19 @@
-<p>german-audiobooks works!</p>
+<!-- src/app/german-audiobooks/german-audiobooks.component.html -->
+
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>German Audiobooks</mat-card-title>
+      <mat-card-subtitle>Explore my favorite German audiobooks</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let audiobook of audiobooks">
+          <mat-icon matListIcon>audiotrack</mat-icon>
+          <div matLine>{{ audiobook.title }} by {{ audiobook.author }}</div>
+          <div matLine class="mat-card-subtitle">{{ audiobook.description }}</div>
+          <a mat-button href="{{ audiobook.link }}" target="_blank">Listen</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  
