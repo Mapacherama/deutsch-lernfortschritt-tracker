@@ -1,1 +1,19 @@
-<p>german-music works!</p>
+<!-- src/app/german-music/german-music.component.html -->
+
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>German Music Playlists on Spotify</mat-card-title>
+      <mat-card-subtitle>Curated playlists I'm listening to</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let playlist of playlists">
+          <mat-icon matListIcon>library_music</mat-icon>
+          <div matLine>{{ playlist.name }}</div>
+          <div matLine class="mat-card-subtitle">{{ playlist.description }}</div>
+          <a mat-button href="{{ playlist.spotifyLink }}" target="_blank">Listen on Spotify</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+  
