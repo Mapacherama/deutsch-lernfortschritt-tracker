@@ -4,6 +4,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +22,7 @@ import { GermanTagebuchComponent } from './german-tagebuch/german-tagebuch.compo
 import { AboutComponent } from './about/about.component';
 import { GermanMusicComponent } from './german-music/german-music.component';
 import { FortschrittsanzeigeComponent } from './fortschrittsanzeige/fortschrittsanzeige.component';
-
+import { PodcastUeberblickComponent } from './podcast-overview/podcast-overview.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { FortschrittsanzeigeComponent } from './fortschrittsanzeige/fortschritts
     GermanAudiobooksComponent,
     GermanHistoryComponent,
     GermanTagebuchComponent,
-    AboutComponent
+    AboutComponent,
+    PodcastUeberblickComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,11 @@ import { FortschrittsanzeigeComponent } from './fortschrittsanzeige/fortschritts
     AppRoutingModule,
     MatProgressBarModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    MatListModule,
+    MatIconModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { GermanAudiobooksComponent } from './german-audiobooks/german-audiobooks
 import { GermanHistoryComponent } from './german-history/german-history.component';
 import { GermanTagebuchComponent } from './german-tagebuch/german-tagebuch.component';
 import { AboutComponent } from './about/about.component';
+import { PodcastUeberblickComponent } from './podcast-overview/podcast-overview.component';
 
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'german-audiobooks', component: GermanAudiobooksComponent },
   { path: 'german-history', component: GermanHistoryComponent },
   { path: 'german-tagebuch', component: GermanTagebuchComponent },
-  { path: 'about', component: AboutComponent },  // Add the route for the About page
+  { path: 'german-podcasts', component: PodcastUeberblickComponent },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({
