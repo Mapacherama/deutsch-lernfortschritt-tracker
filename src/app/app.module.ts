@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 
+import { MatExpansionModule } from '@angular/material/expansion';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -49,6 +51,7 @@ import { PodcastUeberblickComponent } from './podcast-overview/podcast-overview.
     MatListModule,
     MatIconModule,
     MatChipsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

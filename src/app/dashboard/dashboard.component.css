@@ -5,6 +5,19 @@
     padding: 20px;
   }
   
+  /* Add this CSS to your component's CSS file (e.g., about.component.css) */
+.banner {
+  width: 100%; /* Adjust the width as needed, 100% for full container width */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  overflow: hidden; /* Ensure the image does not overflow the banner area */
+}
+
+.banner img {
+  width: 100%; /* Make the image span the full width of the banner */
+  height: auto; /* Adjust the height automatically to maintain aspect ratio */
+  object-fit: cover; /* Cover the banner area, can be adjusted */
+}
   mat-progress-bar {
     width: 100%; /* Stellen Sie sicher, dass die Fortschrittsbalken die volle Breite nutzen */
     margin-bottom: 20px;

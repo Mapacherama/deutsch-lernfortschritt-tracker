@@ -26,7 +26,6 @@ html, body {
 
   app-footer {
     /* flex-shrink: 0; Footer wird nicht verkleinert */
-    position: absolute !important;
     bottom: 0;
     width: 100%;
   }

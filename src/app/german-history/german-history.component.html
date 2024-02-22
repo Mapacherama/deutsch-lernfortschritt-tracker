@@ -1,1 +1,33 @@
-<p>german-history works!</p>
+<mat-toolbar color="primary">
+    <span>German History</span>
+  </mat-toolbar>
+  
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Overview of German History</mat-card-title>
+      <mat-card-subtitle>A journey through the ages</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        German history has been rich and varied, from the ancient tribes that resisted Roman conquest to the modern era of reunification and the European Union. Here, we explore key events and eras that have shaped Germany.
+      </p>
+    </mat-card-content>
+  </mat-card>
+  
+  <mat-accordion class="my-4">
+    <mat-expansion-panel *ngFor="let era of historicalEras">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ era.title }}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ era.period }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>{{ era.description }}</p>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="learnMoreAboutEra(era)">Learn More</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
