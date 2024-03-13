@@ -1,19 +1,25 @@
+<!DOCTYPE html>
 <!-- src/app/german-music/german-music.component.html -->
 
-<mat-card>
-    <mat-card-header>
-      <mat-card-title>German Music Playlists on Spotify</mat-card-title>
-      <mat-card-subtitle>Curated playlists I'm listening to</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-list>
-        <mat-list-item *ngFor="let playlist of playlists">
-          <mat-icon matListIcon>library_music</mat-icon>
-          <div matLine>{{ playlist.name }}</div>
-          <div matLine class="mat-card-subtitle">{{ playlist.description }}</div>
-          <a mat-button href="{{ playlist.spotifyLink }}" target="_blank">Listen on Spotify</a>
-        </mat-list-item>
-      </mat-list>
-    </mat-card-content>
-  </mat-card>
-  
+<div class="bg-white shadow overflow-hidden sm:rounded-lg">
+  <div class="px-4 py-5 sm:px-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">German Music Playlists on Spotify</h3>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500">Curated playlists I'm listening to</p>
+  </div>
+  <div class="border-t border-gray-200">
+    <dl>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6" *ngFor="let playlist of playlists">
+        <dt class="text-sm font-medium text-gray-500 flex items-center">
+          <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM12 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM12 6c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z" />
+          </svg>
+          <span class="ml-2">{{ playlist.name }}</span>
+        </dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{{ playlist.description }}</dd>
+        <dd class="mt-1 text-sm sm:mt-0 sm:col-span-3">
+          <a href="{{ playlist.spotifyLink }}" target="_blank" class="text-indigo-600 hover:text-indigo-900">Listen on Spotify</a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
