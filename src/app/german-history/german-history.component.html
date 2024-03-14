@@ -1,33 +1,35 @@
-<mat-toolbar color="primary">
-    <span>German History</span>
-  </mat-toolbar>
-  
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Overview of German History</mat-card-title>
-      <mat-card-subtitle>A journey through the ages</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        German history has been rich and varied, from the ancient tribes that resisted Roman conquest to the modern era of reunification and the European Union. Here, we explore key events and eras that have shaped Germany.
-      </p>
-    </mat-card-content>
-  </mat-card>
-  
-  <mat-accordion class="my-4">
-    <mat-expansion-panel *ngFor="let era of historicalEras">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{ era.title }}
-        </mat-panel-title>
-        <mat-panel-description>
-          {{ era.period }}
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>{{ era.description }}</p>
-      <mat-action-row>
-        <button mat-button color="primary" (click)="learnMoreAboutEra(era)">Learn More</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-  </mat-accordion>
-  
+<div class="bg-blue-500 p-4">
+  <span class="text-white text-lg">Deutsche Geschichte</span>
+</div>
+
+<div class="bg-white shadow overflow-hidden sm:rounded-lg my-4">
+  <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">Überblick über die deutsche Geschichte</h3>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500">Eine Reise durch die Zeitalter</p>
+  </div>
+  <div class="px-4 py-5 sm:p-6">
+    <p>
+      Die deutsche Geschichte war reich und vielfältig, von den alten Stämmen, die sich gegen die römische Eroberung wehrten, bis hin zur modernen Ära der Wiedervereinigung und der Europäischen Union. Hier erkunden wir Schlüsselereignisse und Epochen, die Deutschland geprägt haben.
+    </p>
+  </div>
+</div>
+
+<div class="my-4">
+  <div class="space-y-2" *ngFor="let era of historicalEras">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item bg-white border border-gray-200">
+        <h2 class="accordion-header mb-0" id="headingOne">
+          <button class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <span class="flex-1">{{ era.title }} - {{ era.period }}</span>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body py-4 px-5">
+            <p>{{ era.description }}</p>
+            <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="learnMoreAboutEra(era)">Mehr erfahren</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

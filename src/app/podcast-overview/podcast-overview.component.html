@@ -1,20 +1,27 @@
-<mat-card>
-    <mat-card-header>
-      <mat-card-title>German Podcasts Overview</mat-card-title>
-      <mat-card-subtitle>A selection of podcasts you're listening to</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-list>
-        <mat-list-item *ngFor="let podcast of podcasts">
-          <mat-icon matListIcon>podcasts</mat-icon>
-          <div matLine>{{ podcast.name }}</div>
-          <div matLine class="mat-card-subtitle">{{ podcast.host }}</div>
-          <p matLine>{{ podcast.description }}</p>          
-          <mat-chip-set>
-            <mat-chip color="primary">{{ podcast.releaseDate | date }}</mat-chip>
-          </mat-chip-set>
-        </mat-list-item>
-      </mat-list>
-    </mat-card-content>
-  </mat-card>
-  
+<!-- src/app/german-podcasts/german-podcasts.component.html -->
+
+<div class="bg-white shadow overflow-hidden rounded-lg">
+  <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
+    <h2 class="text-lg leading-6 font-medium text-gray-900">Übersicht deutscher Podcasts</h2>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500">Eine Auswahl von Podcasts, die du hörst</p>
+  </div>
+  <ul class="divide-y divide-gray-200">
+    <li *ngFor="let podcast of podcasts" class="px-4 py-5 sm:px-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="flex items-center space-x-3">
+        <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-2v13M9 10l12-2m-6 8v2m4-6V5l-4 1v3l4-1m0 4v3l-4-1v-3m4 1H9m6-5H9m0 4h6"></path>
+        </svg>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm font-medium text-gray-900 truncate">{{ podcast.name }}</p>
+          <p class="text-sm text-gray-500 truncate">{{ podcast.host }}</p>
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <p class="mt-2 text-sm text-gray-500">{{ podcast.description }}</p>
+        <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mt-2">
+          {{ podcast.releaseDate | date }}
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
