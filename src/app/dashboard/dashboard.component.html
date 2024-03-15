@@ -1,24 +1,37 @@
-<div class="dashboard">
-  <img src="assets/images/02a9c388-6458-44af-ac23-0b8fbd36ab83.webp" alt="Dashboard Image" style="width:25%;">
-    <h2 class="text-3xl font-bold">Übersichtsstatistik</h2>    
-    <p>Gelernte Wörter: {{gelernteWoerter}}</p>
-    <p>Abgeschlossene Lektionen: {{abgeschlosseneLektionen}}</p>
-    <p>Verbrachte Lernzeit: {{verbrachteLernzeit}}</p>
+<div class="dashboard bg-gray-100 p-5 rounded-lg shadow-lg">
+  <img src="assets/images/02a9c388-6458-44af-ac23-0b8fbd36ab83.webp" alt="Dashboard Image" class="w-1/4 mb-4">
+  <h2 class="text-3xl font-bold mb-4">Übersichtsstatistik</h2>
+  <p class="mb-2">Gelernte Wörter: <span class="font-semibold">{{gelernteWoerter}}</span></p>
+  <p class="mb-2">Abgeschlossene Lektionen: <span class="font-semibold">{{abgeschlosseneLektionen}}</span></p>
+  <p class="mb-4">Verbrachte Lernzeit: <span class="font-semibold">{{verbrachteLernzeit}}</span></p>
 
-  
-    <h2>Fortschrittsbalken</h2>
-    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.grammatik}}"></mat-progress-bar>
-    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.wortschatz}}"></mat-progress-bar>
-    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.aussprache}}"></mat-progress-bar>
-  
-    <h2>Zuletzt gelernte Lektionen</h2>
-    <div *ngFor="let lektion of zuletztGelernteLektionen">
-      <p>{{lektion.name}}: {{lektion.beschreibung}}</p>
-    </div>
-  
-    <h2>Empfohlene Lektionen</h2>
-    <div *ngFor="let lektion of empfohleneLektionen">
-      <p>{{lektion.name}}: {{lektion.beschreibung}}</p>
-    </div>
+  <h2 class="text-2xl font-semibold mb-3">Fortschrittsbalken</h2>
+  <div class="mb-4">
+    <label for="grammatik" class="block text-sm font-medium text-gray-700 mb-1">Grammatik</label>
+    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.grammatik}}" class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div class="bg-blue-600 h-2.5 rounded-full" style="width: {{fortschrittsStatistiken.grammatik}}%"></div>
+    </mat-progress-bar>
   </div>
-  
+  <div class="mb-4">
+    <label for="wortschatz" class="block text-sm font-medium text-gray-700 mb-1">Wortschatz</label>
+    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.wortschatz}}" class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div class="bg-green-600 h-2.5 rounded-full" style="width: {{fortschrittsStatistiken.wortschatz}}%"></div>
+    </mat-progress-bar>
+  </div>
+  <div class="mb-6">
+    <label for="aussprache" class="block text-sm font-medium text-gray-700 mb-1">Aussprache</label>
+    <mat-progress-bar mode="determinate" value="{{fortschrittsStatistiken.aussprache}}" class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div class="bg-red-600 h-2.5 rounded-full" style="width: {{fortschrittsStatistiken.aussprache}}%"></div>
+    </mat-progress-bar>
+  </div>
+
+  <h2 class="text-2xl font-semibold mb-3">Zuletzt gelernte Lektionen</h2>
+  <div *ngFor="let lektion of zuletztGelernteLektionen" class="mb-2">
+    <p>{{lektion.name}}: <span class="text-gray-600">{{lektion.beschreibung}}</span></p>
+  </div>
+
+  <h2 class="text-2xl font-semibold mb-3">Empfohlene Lektionen</h2>
+  <div *ngFor="let lektion of empfohleneLektionen" class="mb-2">
+    <p>{{lektion.name}}: <span class="text-gray-600">{{lektion.beschreibung}}</span></p>
+  </div>
+</div>
